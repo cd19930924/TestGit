@@ -1,1 +1,1 @@
-qwertyuiopoiuytrewqwertyuioiuytrewqwertyuiuytrewqwertyuiytrertTYUIOIUYTREWQWERTYUI
+this is a TEST for vim. 這是一個測試檔案。
