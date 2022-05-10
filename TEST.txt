@@ -1,1 +1,6 @@
 this is a TEST for vim. 這是一個測試檔案。
+
+test for vi editer.
+press i/a/o to edit. press esc to leave edit mode.
+
+In the 命列mode, press :wq to save and quit.
