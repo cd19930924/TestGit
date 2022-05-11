@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Daily Warm照護媒合</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/healthcare.png" />
+    <!-- Bootstrap Icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic"
+        rel="stylesheet" type="text/css" />
+    <!-- SimpleLightbox plugin CSS-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="../css/styles.css" rel="stylesheet" />
+</head>
+
+<body id="page-top">
+    <!-- Navigation 導覽列 -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top1 py-3" id="mainNav">
+        <div class="container px-4 px-lg-0">
+            <a class="navbar-brand" href="#page-top">Daily Warm</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto my-2 my-lg-0">
+
+                    <!-- 首頁 -->
+                    <li class="nav-item"><a class="nav-link" id="firstpage" href="#">首頁</a></li>
+                    <!-- 關於我們 -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            關於我們
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">最新消息</a></li>
+                            <li><a class="dropdown-item" href="#">網站簡介</a></li>
+                            <li><a class="dropdown-item" href="#">常見問題</a></li>
+                        </ul>
+                    </li>
+                    <!-- 服務項目 -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            服務項目
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">照護</a></li>
+                            <li><a class="dropdown-item" href="#">餐點</a></li>
+                            <li><a class="dropdown-item" href="driveorder/MyDriveOrder.html">派車</a></li>
+                        </ul>
+                    </li>
+                    <!-- 通知 -->
+                    <li class="nav-item"><a class="nav-link" href="#">通知</a></li>
+                    <!-- 會員 -->
+                    <li id="member" class="nav-item dropdown">
+                        <a class="nav-link" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="fas fa-user-circle fa-2x "></i>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" id="switchAcct"href="Carer.html">切換帳號</a></li>
+                            <li><a class="dropdown-item" id="applyCarer" href="">申請成為照護員</a></li>
+                            <li><a class="dropdown-item" id="memberData" href="./setMemData.html">會員資料設定</a></li>
+                            <li><a class="dropdown-item" id="logout">登出</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Masthead ABOUT US -->
+
+    <!-- Services 服務內容 -->
+    <section class="page-section" id="portfolio">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
+                <div class="col-lg-6">
+                    <!-- * * * * * * * * * * * * * * *-->
+                    <!-- * * SB Forms Contact Form * *-->
+                    <!-- * * * * * * * * * * * * * * *-->
+                    <!-- This form is pre-integrated with SB Forms.-->
+                    <!-- To make this form functional, sign up at-->
+                    <!-- https://startbootstrap.com/solution/contact-forms-->
+                    <!-- to get an API token!-->
+                    <div class="container">
+			<h2>結帳資料:</h2>
+			<br>
+			<form method="post" class="form-horizontal" id="myForm" name="myForm" action="http://54.148.206.111:8081/TibameF2_MVC_ShoppingCart-X-menu/ord/ord.do">
+				
+				<div class="form-group">
+					<label class="control-label col-sm-2">收件人:</label>
+					<div class="col-sm-10">
+						<input name="receiver" type="text" class="form-control" id="receiver" placeholder="請輸入收件人姓名" style="width: 500px" maxlength="15">
+					</div>
+				</div>
+				
+				<div class="form-group">
+					<label class="control-label col-sm-2">地址:</label>
+					<div class="col-sm-10">
+                         <select id="zone1" name="zone1" class="form-control" style="width: 100px;"><option value="">請選擇</option><option value="台北市">台北市</option><option value="基隆市">基隆市</option><option value="新北市">新北市</option><option value="宜蘭縣">宜蘭縣</option><option value="新竹市">新竹市</option><option value="新竹縣">新竹縣</option><option value="桃園縣">桃園縣</option><option value="苗栗縣">苗栗縣</option><option value="台中市">台中市</option><option value="彰化縣">彰化縣</option><option value="南投縣">南投縣</option><option value="嘉義市">嘉義市</option><option value="嘉義縣">嘉義縣</option><option value="雲林縣">雲林縣</option><option value="台南市">台南市</option><option value="高雄市">高雄市</option><option value="屏東縣">屏東縣</option><option value="台東縣">台東縣</option><option value="花蓮縣">花蓮縣</option><option value="澎湖縣">澎湖縣</option><option value="金門縣">金門縣</option><option value="連江縣">連江縣</option></select>  <!-- 縣市 -->
+                         <select id="zone2" name="zone2" class="form-control" style="width: 100px;"><option value="">請選擇</option></select>  <!-- 鄉鎮市區 -->
+                         <input type="text" id="zipcode" name="zipcode" class="form-control" style="width: 60px;">  <!-- 郵遞區號 -->
+                         <input type="text" name="subaddress" placeholder="請輸入地址" class="form-control" style="width: 225px;"><p>   <!-- 地址 -->
+					</p></div>
+				</div>
+				
+				<div class="form-group">
+					<label class="control-label col-sm-2">電話:</label>
+					<div class="col-sm-10">
+					     <input name="rec_phone" type="text" class="form-control" id="rec_phone" placeholder="ex:09XXXXXXXX" style="width: 308px" maxlength="10">
+					</div>
+				</div>
+				
+				<div class="form-group">
+					<label class="control-label col-sm-2">信用卡卡號:</label>
+					<div class="col-sm-10">
+						 <input type="text" class="form-control" style="width: 62px" maxlength="4" name="cdno1" size="5" onkeyup="cdno(1);">
+                         ─ 
+                         <input type="text" class="form-control" style="width: 62px" maxlength="4" name="cdno2" size="5" onkeyup="cdno(2);">
+                         ─ 
+                         <input type="text" class="form-control" style="width: 62px" maxlength="4" name="cdno3" size="5" onkeyup="cdno(3);">	
+                         ─ 
+                         <input type="text" class="form-control" style="width: 62px" maxlength="4" name="cdno4" size="5">
+					</div>
+				</div>
+				
+				<div class="form-group">
+                     <label class="control-label col-sm-2"></label>
+					 <div class="col-sm-10">
+						  <label class="radio-inline"> <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked="">VISA </label> 
+						  <label class="radio-inline"> <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> MasterCard </label> 
+						  <label class="radio-inline"> <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> JCB </label>
+					</div>
+				</div>
+				
+				<div class="form-group">
+					<label class="control-label col-sm-2">信用卡截止日:</label>
+					<div class="col-sm-10">
+                         <select class="form-control" name="expire_month">
+                             <option value="" selected="">請選擇</option>
+                           
+                             <option value="1">1</option>
+                           
+                             <option value="2">2</option>
+                           
+                             <option value="3">3</option>
+                           
+                             <option value="4">4</option>
+                           
+                             <option value="5">5</option>
+                           
+                             <option value="6">6</option>
+                           
+                             <option value="7">7</option>
+                           
+                             <option value="8">8</option>
+                           
+                             <option value="9">9</option>
+                           
+                             <option value="10">10</option>
+                           
+                             <option value="11">11</option>
+                           
+                             <option value="12">12</option>
+                           
+                         </select>月
+                
+                         <select class="form-control" name="expire_year">
+                             <option value="">請選擇</option>
+                           
+                             <option value="2015">2015</option>
+                           
+                             <option value="2016">2016</option>
+                           
+                             <option value="2017">2017</option>
+                           
+                             <option value="2018">2018</option>
+                           
+                             <option value="2019">2019</option>
+                           
+                             <option value="2020">2020</option>
+                           
+                             <option value="2021">2021</option>
+                           
+                             <option value="2022">2022</option>
+                           
+                             <option value="2023">2023</option>
+                           
+                             <option value="2024">2024</option>
+                           
+                             <option value="2025">2025</option>
+                           
+                         </select>年
+					</div>
+				</div>
+				
+				<div class="form-group">
+					<label class="control-label col-sm-2">信用卡安全碼:</label>
+					<div class="col-sm-10"> 
+					     <input type="text" name="expire_safe" class="form-control" placeholder="請輸入安全碼" maxlength="5">
+					</div>
+				</div>
+				
+				<div class="form-group">
+					<div class="col-sm-offset-2 col-sm-10">
+					     <button type="button" onclick="getMemberData()" id="mbutton" class="btn btn-success">導入會員資料</button>
+				         <input type="button" class="order" onclick="return check(document.myForm)" value="送出訂單" style="display: inline-block;">
+	                </div>
+				</div>			
+			    <input type="hidden" name="ord_date" value="2022-01-06">
+			    <input type="hidden" name="mem_no" value="M000001">
+			    <input type="hidden" name="ord_total" value="33000">	
+			    <input type="hidden" name="rec_zip" id="rec_zip" value="">
+			    <input type="hidden" name="rec_address" id="rec_address" value="">
+			    <input type="hidden" name="action" value="insertNewOrd">
+			
+			     
+			        <input type="hidden" name="product_no" value="1003">	
+			        <input type="hidden" name="quantity" value="1">	
+			     
+			        <input type="hidden" name="product_no" value="1002">	
+			        <input type="hidden" name="quantity" value="1">	
+			     
+			        <input type="hidden" name="product_no" value="1006">	
+			        <input type="hidden" name="quantity" value="1">	
+			     	
+			</form>
+		</div>
+	</div>
+                </div>
+            </div>
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-lg-4 text-center mb-5 mb-lg-0">
+                    <i class="bi-phone fs-2 mb-3 text-muted"></i>
+                    <div>還沒想到要打什麼</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-light py-5">
+        <div class="container px-4 px-lg-5">
+            <div class="small text-center text-muted">Copyright &copy; 2021 - Daily Warm</div>
+        </div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- SimpleLightbox plugin JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <!-- * *                               SB Forms JS                               * *-->
+    <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <!-- <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script> -->
+    <!-- Jquery -->
+    <script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        let dd = new Date();
+        let ss = dd.getFullYear() + "-" +  ((dd.getMonth() + 1) < 10 ? "0" + (dd.getMonth() + 1) : (dd.getMonth() + 1)) + "-" + (dd.getDate() < 10 ? "0" + dd.getDate() : dd.getDate());  
+        console.log(ss);
+        dd.setDate(dd.getDate() + 60);//獲取AddDayCount天后的日期  
+        let y = dd.getFullYear();
+        let m = (dd.getMonth() + 1) < 10 ? "0" + (dd.getMonth() + 1) : (dd.getMonth() + 1);//獲取當前月份的日期，不足10補0  
+        let d = dd.getDate() < 10 ? "0" + dd.getDate() : dd.getDate();//獲取當前幾號，不足10補0  
+        let ss2 = y + "-" + m + "-" + d;   
+        document.querySelector("#phone").setAttribute("min",ss);
+        document.querySelector("#phone").setAttribute("max",ss2);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>註冊會員</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Bootstrap Icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic"
+        rel="stylesheet" type="text/css" />
+    <!-- SimpleLightbox plugin CSS-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <style>
+        svg {
+            width: 1rem;
+            height: 1rem;
+        }
+
+        .forget-grid {
+            text-align: right;
+        }
+
+        .forgotpassword {
+            border: white;
+            background-color: white;
+        }
+
+        .forgotpassword:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body id="page-top">
+    <!-- Navigation 導覽列 -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top1 py-3" id="mainNav">
+        <div class="container px-4 px-lg-0">
+            <a class="navbar-brand" href="#page-top">Daily Warm</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto my-2 my-lg-0">
+
+                    <!-- 首頁 -->
+                    <li class="nav-item"><a class="nav-link" id="firstpage" href="#">首頁</a></li>
+                    <!-- 關於我們 -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            關於我們
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">最新消息</a></li>
+                            <li><a class="dropdown-item" href="#">網站簡介</a></li>
+                            <li><a class="dropdown-item" href="#">常見問題</a></li>
+                        </ul>
+                    </li>
+                    <!-- 服務項目 -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            服務項目
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">照護</a></li>
+                            <li><a class="dropdown-item" href="#">餐點</a></li>
+                            <li><a class="dropdown-item" href="#">派車</a></li>
+                        </ul>
+                    </li>
+                    <!-- 通知 -->
+                    <li class="nav-item"><a class="nav-link" href="#">通知</a></li>
+                    <!-- 會員 -->
+                    <li id="member" class="nav-item dropdown">
+                        <a class="nav-link" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="fas fa-user-circle fa-2x "></i>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" id="switchAcct"href="Carer.html">切換帳號</a></li>
+                            <li><a class="dropdown-item" id="applyCarer" href="">申請成為照護員</a></li>
+                            <li><a class="dropdown-item" id="logout">登出</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Contact-->
+    <section class="page-section" id="contact">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-lg-8 col-xl-6 text-center">
+                    <h2 class="mt-0"></h2>
+                </div>
+            </div>
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-lg-8 col-xl-6 text-center">
+                    <h2 class="mt-0">註冊會員</h2>
+                    <hr class="divider" />
+                </div>
+            </div>
+            <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
+                <div class="col-lg-6">
+                    <!-- * * * * * * * * * * * * * * *-->
+                    <!-- * * SB Forms Contact Form * *-->
+                    <!-- * * * * * * * * * * * * * * *-->
+                    <!-- This form is pre-integrated with SB Forms.-->
+                    <!-- To make this form functional, sign up at-->
+                    <!-- https://startbootstrap.com/solution/contact-forms-->
+                    <!-- to get an API token!-->
+                    <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                        <!-- Account input-->
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="account" type="text" placeholder="請輸入帳號..."
+                                data-sb-validations="required" />
+                            <label for="account">帳號</label>
+                            <div class="invalid-feedback" data-sb-feedback="account:required">請輸入帳號</div>
+                        </div>
+                        <!-- Password input-->
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="password" type="password" placeholder="請輸入密碼..."
+                                data-sb-validations="required" />
+                            <label for="password">密碼</label>
+                            <div class="invalid-feedback" data-sb-feedback="password:required">請輸入密碼</div>
+                        </div>
+                        <!-- Username input-->
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="username" type="text" placeholder="請輸入姓名..."
+                                data-sb-validations="required" />
+                            <label for="username">姓名</label>
+                            <div class="invalid-feedback" data-sb-feedback="username:required">請輸入姓名</div>
+                        </div>
+                        <!-- Phonenumber input-->
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="phonenumber" type="text" placeholder="09XX..."
+                                data-sb-validations="required" maxlength="10" />
+                            <label for="phonenumber">電話</label>
+                            <div class="invalid-feedback" data-sb-feedback="phonenumber:required">請輸入電話</div>
+                        </div>
+                        <!-- District select-->
+                        <div class="form-floating mb-3">
+                            <label>縣市</label>
+                            <select class="form-floating mb-1 form-control " id="county"
+                                style="height:100%;display: inline-block;width:49%;text-align: center;">
+                                <option value="">請選擇縣市</option>
+                            </select>
+                            <select class="form-floating mb-1 form-control" id="district"
+                                style="margin-top: 15px;height:100%;display: inline-block;width:49%;text-align: center;">
+                                <option value="">請選擇地區</option>
+                            </select>
+                        </div>
+                        <!-- Address input-->
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="address" type="text" placeholder="請輸入地址..."
+                                data-sb-validations="required" />
+                            <label for="address">地址</label>
+                            <div class="invalid-feedback" data-sb-feedback="address:required">請輸入地址</div>
+                        </div>
+                        <!-- Gender select-->
+                        <div class="mb-3"
+                            style="vertical-align: text-bottom ;display: inline-block;flex:0 0 auto;width:66.6666666667%;">
+                            <label style="height:20px;display:inline;width: 70px;">性別:</label>
+                            <input type="radio" name="gender" id="men" value="0"
+                                style="height:20px;display: inline;width:20px;" />
+                            <label for="men">男</label>
+                            <input type="radio" name="gender" id="women" value="1"
+                                style="height:20px;display: inline;width:20px;" />
+                            <label for="women">女</label>
+                        </div>
+                        <!-- Email input-->
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="email" type="email" placeholder="請輸入Email..."
+                                data-sb-validations="required" />
+                            <label for="email">Email</label>
+                            <div class="invalid-feedback" data-sb-feedback="email:required">請輸入Email</div>
+                        </div>
+                        <!-- Birthday input-->
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="birthday" type="date" placeholder="請輸入Email..."
+                                data-sb-validations="required" />
+                            <label for="birthday">生日</label>
+                            <div class="invalid-feedback" data-sb-feedback="birthday:required">請輸入生日</div>
+                        </div>
+                        <!-- Birthday input-->
+                        <div class="form-floating mb-3">
+                            <input class="form-control" id="age" type="text" placeholder="請輸入年齡..."
+                                data-sb-validations="required" />
+                            <label for="age">年齡</label>
+                            <div class="invalid-feedback" data-sb-feedback="age:required">請輸入年齡</div>
+                        </div>
+                        <!-- Submit success message-->
+                        <!---->
+                        <!-- This is what your users will see when the form-->
+                        <!-- has successfully submitted-->
+                        <div class="d-none" id="submitSuccessMessage">
+                            <div class="text-center mb-3">
+                                <div class="fw-bolder">Form submission successful!</div>
+                                To activate this form, sign up at
+                                <br />
+                                <a
+                                    href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                            </div>
+                        </div>
+                        <!-- Submit error message-->
+                        <!---->
+                        <!-- This is what your users will see when there is-->
+                        <!-- an error submitting the form-->
+                        <div class="d-none" id="submitErrorMessage">
+                            <div class="text-center text-danger mb-3">Error sending message!</div>
+                        </div>
+                        <!-- Submit Button-->
+                        <div class="d-grid"><button class="btn btn-primary btn-xl disabled" id="submitButton"
+                                type="submit">註冊</button></div>
+                    </form>
+                </div>
+            </div>
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-lg-4 text-center mb-5 mb-lg-0">
+                    <i class="bi-phone fs-2 mb-3 text-muted"></i>
+                    <div>+1 (555) 123-4567</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer-->
+
+    <footer class="bg-light py-5">
+        <div class="container px-4 px-lg-5">
+            <div class="small text-center text-muted">Copyright &copy; 2021 - Daily Warm</div>
+        </div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- SimpleLightbox plugin JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <!-- * *                               SB Forms JS                               * *-->
+    <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    <!-- Jquery -->
+    <script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/regist.js"></script>
+    <script src="js/utility.js"></script>
+
+</body>
+
+</html>
